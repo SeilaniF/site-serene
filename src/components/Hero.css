@@ -1,0 +1,194 @@
+/* Hero.css */
+
+/* Fontes do Google */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 70vh; /* altura mínima, mas permite crescer */
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  color: #fcfce4;
+  overflow: visible; /* evita cortar conteúdo */
+
+  /* Imagem de fundo à direita */
+  background: url("/hero-mom.jpg") no-repeat right center;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* Container do conteúdo */
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* espaço entre logo, título e botão */
+  max-width: 600px;
+}
+
+/* Logo quadrada */
+.hero-logo-container {
+  width: 210px;
+  height: 200px;
+  border-radius: 0; /* quadrada */
+  overflow: hidden;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+/* Logo com zoom fixo */
+.hero-logo {
+  width: 400px;
+  height: 200px;
+  object-fit: contain;
+  transform: scale(1.3); /* menor zoom para caber o conteúdo */
+  transform-origin: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Efeito ao passar o mouse na logo */
+.hero-logo:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+/* Título */
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #77770d;
+  margin-top: -20px;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #77770d;
+  font-weight: 600;
+  margin-bottom: 25px; /* aumenta espaço abaixo */
+}
+
+.hero-subtitle strong {
+  font-size: 1.5rem;
+  color: #99990f;
+}
+
+/* Botão */
+.hero-btn {
+  margin-top: 8px;
+  padding: 12px 28px;
+  background: #77770d;
+  color: #fcfce4;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero-btn:hover {
+  background: #99990f;
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+/* Responsividade Hero */
+/* Responsividade Hero */
+/* Responsividade Hero */
+/* Responsividade Hero */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 30px 20px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* Overlay para clarear a imagem no celular */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(252, 252, 228, 0.7);
+    z-index: 0;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza conteúdo */
+    position: relative;
+    z-index: 1;
+    gap: 20px;
+    align-items: flex-start; /* em vez de center */
+    text-align: center;
+  }
+
+  .hero-logo-container {
+    width: 110px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 0;
+  }
+
+  .hero-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  .hero-text {
+    width: 95%;
+    max-width: 500px;
+    text-align: center;
+    padding-left: 0;
+    margin: 0 auto; /* centraliza horizontalmente */
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .hero-btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}

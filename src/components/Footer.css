@@ -1,0 +1,35 @@
+.footer {
+  background: #ffffff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #77770d;
+  border-top: 3px solid #e5e519;
+  font-size: 0.9rem;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer a {
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.developer-name {
+  color: #e5e519;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.developer-name:hover {
+  color: #fcfce4;
+  cursor: pointer;
+}

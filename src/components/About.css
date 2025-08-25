@@ -1,0 +1,414 @@
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background: #fcfce4;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #77770d;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.about-header h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #e5e519;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.about-header h2:hover::after {
+  transform: translateX(10px);
+  background: #77770d;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #77770d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Blocos */
+.about-block {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(119,119,13,0.1);
+  transition: all 0.4s ease;
+}
+
+.about-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(119,119,13,0.15);
+}
+
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Imagens */
+.about-image {
+  flex: 1.1;
+}
+
+.image-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(119,119,13,0.15);
+  position: relative;
+  padding: 10px;
+  background: white;
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.image-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #e5e519;
+  border-radius: 10px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.image-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* Conteúdo */
+.about-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.content-header .icon {
+  font-size: 2rem;
+  color: #e5e519;
+  background: rgba(229, 229, 25, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.content-header h3 {
+  font-size: 1.5rem;
+  color: #77770d;
+  margin: 0;
+}
+
+/* Parágrafos */
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #77770d;
+}
+
+.highlight {
+  color: #e5e519;
+  font-weight: bold;
+}
+
+/* Feature List */
+.feature-list {
+  margin: 20px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: rgba(252,252,228,0.7);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 3px 10px rgba(119,119,13,0.1);
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+  color: #e5e519;
+}
+
+.feature-item span {
+  font-size: 1rem;
+}
+
+/* Info Cards */
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.info-card {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  background: rgba(252,252,228,0.7);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(119,119,13,0.15);
+}
+
+/* Benefit Details */
+.benefit-details {
+  margin: 15px 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: rgba(252,252,228,0.7);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 3px 10px rgba(119,119,13,0.1);
+}
+
+.detail-icon {
+  font-size: 1rem;
+  color: #e5e519;
+}
+
+/* Eligibility Checker */
+.eligibility-checker h4 {
+  font-size: 1.1rem;
+  color: #77770d;
+  margin-bottom: 10px;
+}
+
+.checker-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.checker-label {
+  font-size: 1rem;
+}
+
+/* Resultado e botão */
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 28px;
+  background: #77770d;
+  color: #fcfce4;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background: #99990f;
+  transform: scale(1.05);
+}
+
+.legal-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #77770d;
+}
+
+/* Responsividade About */
+
+/* Tablets grandes / laptops menores */
+@media (max-width: 1024px) {
+  .about-block {
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+    align-items: center;
+  }
+  .about-image, .about-content {
+    flex: 1;
+    width: 100%;
+  }
+  .image-frame img {
+    max-height: 400px;
+    object-fit: contain;
+  }
+}
+
+/* Tablets / celulares médios */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 15px;
+  }
+  .about-header h2 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .about-block {
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px;
+    align-items: flex-start; /* texto aparece abaixo da imagem */
+  }
+  .about-image {
+    width: 100%;
+    flex: none;
+    order: 0;
+  }
+  .about-content {
+    width: 100%;
+    flex: none;
+    order: 1;
+    text-align: left;
+  }
+  .image-frame {
+    width: 100%;
+    padding: 0;
+  }
+  .image-frame img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+  }
+  .content-header h3 {
+    font-size: 1.3rem;
+  }
+  .about-content p {
+    font-size: 0.95rem;
+  }
+  .feature-item span {
+    font-size: 0.95rem;
+  }
+  .info-card {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+  .detail-item {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+  .eligibility-checker h4 {
+    font-size: 1rem;
+  }
+  .checker-label {
+    font-size: 0.95rem;
+  }
+  .cta-btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+  .legal-note {
+    font-size: 0.9rem;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .about-header h2 {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .content-header h3 {
+    font-size: 1.2rem;
+  }
+  .about-content p {
+    font-size: 0.9rem;
+  }
+  .feature-item span {
+    font-size: 0.9rem;
+  }
+  .info-card {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .detail-item {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+  .eligibility-checker h4 {
+    font-size: 0.95rem;
+  }
+  .checker-label {
+    font-size: 0.9rem;
+  }
+  .cta-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+  .about-block.reverse {
+    flex-direction: column; /* remove row-reverse em celular */
+  }
+  .about-image, .about-content {
+    width: 100%;
+  }
+  .image-frame img {
+    max-height: 250px;
+    object-fit: contain;
+  }
+}

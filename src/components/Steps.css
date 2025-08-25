@@ -1,0 +1,141 @@
+/* Steps.css */
+
+/* Seção */
+.steps {
+  padding: 30px 20px;
+  background: #fcfce4;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.steps h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #77770d;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.steps h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #e5e519;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.steps h2:hover::after {
+  transform: translateX(10px);
+  background: #77770d;
+}
+
+/* Container de etapas */
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Cartões de etapa redondos */
+.step {
+  flex: 0 0 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 10px 30px rgba(119,119,13,0.1);
+  transition: transform 0.4s, box-shadow 0.4s, filter 0.4s;
+  color: #77770d;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;             /* começa invisível para animação de scroll */
+  transform: translateY(30px);
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #e5e519;
+}
+
+.step p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #77770d;
+}
+
+.step:hover {
+  transform: translateY(-6px) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(119,119,13,0.25);
+  filter: brightness(1.05);
+}
+
+/* Botão CTA */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #77770d;
+  color: #fcfce4;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+.cta-btn:hover {
+  background: #99990f;
+  transform: scale(1.05);
+}
+
+/* Efeito de pulso do botão */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .steps h2 {
+    font-size: 2rem;
+  }
+
+  .steps-container {
+    gap: 20px;
+  }
+
+  .step {
+    flex: 0 0 160px;
+    height: 160px;
+    padding: 15px;
+  }
+
+  .step h3 {
+    font-size: 1.5rem;
+  }
+
+  .step p {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
