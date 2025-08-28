@@ -157,10 +157,14 @@ export default function About() {
       <a href="https://wa.link/y9jum1" target="_blank" className="cta-btn">FAZER AVALIAÇÃO GRATUITA</a>
     </div>
 
-    <div className="legal-note">
-      <FaBalanceScale className="icon" />
-      <span>Direito concedido no art. 71-A, da lei 8213/91 da Constituição Federal</span>
-    </div>
+   <div className="legal-note">
+  <FaBalanceScale className="icon" />
+  <span>
+    Direito concedido pelo art. 201, II da CF/88.  
+    Amparado pelo art. 71-A da Lei n. 8.213 (Planos de Previdência Social)
+  </span>
+</div>
+
   </div>
 </div>
     </div>
