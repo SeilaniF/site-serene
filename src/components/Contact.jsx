@@ -21,6 +21,9 @@ export default function Contact() {
     cards.forEach((card) => observer.observe(card));
   }, []);
 
+  const whatsappLink =
+    "https://wa.me/5511977874213?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20se%20tenho%20direito%20ao%20aux%C3%ADlio%20materno%3F";
+
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
@@ -31,9 +34,9 @@ export default function Contact() {
 
         <div className="contact-cards">
           <a
-            href="https://wa.link/y9jum1"
+            href={whatsappLink}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="contact-card whatsapp"
           >
             <FaWhatsapp size={36} />
